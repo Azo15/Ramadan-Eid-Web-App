@@ -1,23 +1,25 @@
 :root {
-    /* Midnight Gold Palette */
-    --bg-color: #020617;
-    /* Deep midnight blue */
-    --bg-gradient: radial-gradient(circle at 50% 0%, #1e293b 0%, #020617 100%);
-    --card-bg: rgba(255, 255, 255, 0.05);
-    /* Glass effect */
-    --card-border: rgba(255, 255, 255, 0.1);
-    --primary-color: #fbbf24;
-    /* Amber 400 */
-    --secondary-color: #f59e0b;
-    /* Amber 500 */
-    --accent-color: #d97706;
-    /* Amber 600 */
-    --text-color: #f1f5f9;
-    /* Slate 100 */
-    --text-muted: #94a3b8;
-    /* Slate 400 */
-    --shadow-soft: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-    --shadow-glow: 0 0 20px rgba(251, 191, 36, 0.15);
+    /* Card Theme Palette (Black & Gold) */
+    --bg-color: #000000;
+    /* Pure Black */
+    --bg-gradient: radial-gradient(circle at 50% 50%, #2b2b2b 0%, #000000 100%);
+    /* Charcoal to Black Radial */
+    --card-bg: rgba(20, 20, 20, 0.6);
+    /* Darker glass */
+    --card-border: rgba(255, 215, 0, 0.2);
+    /* Golden border hint */
+    --primary-color: #ffd700;
+    /* Gold */
+    --secondary-color: #daa520;
+    /* Goldenrod */
+    --accent-color: #b8860b;
+    /* Dark Goldenrod */
+    --text-color: #ffffff;
+    /* Pure White */
+    --text-muted: #d1d5db;
+    /* Light Grey */
+    --shadow-soft: 0 10px 20px -5px rgba(0, 0, 0, 0.8);
+    --shadow-glow: 0 0 25px rgba(255, 215, 0, 0.1);
 
     /* Fonts */
     --font-heading: 'Aref Ruqaa', serif;
