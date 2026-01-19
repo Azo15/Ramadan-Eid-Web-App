@@ -129,17 +129,23 @@ var hadisListesi = {
     tr: [
         { metin: "Oruç, sabrın yarısıdır.", kaynak: "Hadis-i Şerif (İbn Mâce)" },
         { metin: "En hayırlı sadaka, Ramazan ayında verilendir.", kaynak: "Hadis-i Şerif (Tirmizi)" },
-        { metin: "Kim inanarak ve sevabını Allah'tan bekleyerek Ramazan orucunu tutarsa, geçmiş günahları bağışlanır.", kaynak: "Hadis-i Şerif (Buhari)" }
+        { metin: "Kim inanarak ve sevabını Allah'tan bekleyerek Ramazan orucunu tutarsa, geçmiş günahları bağışlanır.", kaynak: "Hadis-i Şerif (Buhari)" },
+        { metin: "Sahur yemeği yiyin, zira sahurda bereket vardır.", kaynak: "Hadis-i Şerif (Buhari)" },
+        { metin: "Oruçlu için iki sevinç vardır: Biri iftar ettiği zaman, diğeri de Rabbi'ne kavuştuğu zaman.", kaynak: "Hadis-i Şerif (Müslim)" }
     ],
     en: [
         { metin: "Fasting is half of patience.", kaynak: "Hadith (Ibn Majah)" },
         { metin: "The best charity is that given in Ramadan.", kaynak: "Hadith (Tirmidhi)" },
-        { metin: "Whoever fasts Ramadan out of faith and in the hope of reward, his previous sins will be forgiven.", kaynak: "Hadith (Bukhari)" }
+        { metin: "Whoever fasts Ramadan out of faith and in the hope of reward, his previous sins will be forgiven.", kaynak: "Hadith (Bukhari)" },
+        { metin: "Take Suhur (pre-dawn meal), for there is a blessing in Suhur.", kaynak: "Hadith (Bukhari)" },
+        { metin: "The fasting person has two joyous occasions: one when he breaks his fast, and the other when he meets his Lord.", kaynak: "Hadith (Muslim)" }
     ],
     ar: [
-        { metin: "الصوم نصف الصبر.", kaynak: "سنن ابن ماجه" },
-        { metin: "أفضل الصدقة صدقة في رمضان.", kaynak: "سنن الترمذي" },
-        { metin: "مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ.", kaynak: "صحيح البخاري" }
+        { metin: "الصَّوْمُ نِصْفُ الصَّبْرِ.", kaynak: "سنن ابن ماجه" },
+        { metin: "أَفْضَلُ الصَّدَقَةِ صَدَقَةٌ فِي رَمَضَانَ.", kaynak: "سنن الترمذي" },
+        { metin: "مَنْ صَامَ رَمَضَانَ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ.", kaynak: "صحيح البخاري" },
+        { metin: "تَسَحَّرُوا فَإِنَّ فِي السَّحُورِ بَرَكَةً.", kaynak: "صحيح البخاري" },
+        { metin: "لِلصَّائِمِ فَرْحَتَانِ: فَرْحَةٌ عِنْدَ فِطْرِهِ، وَفَرْحَةٌ عِنْدَ لِقَاءِ رَبِّهِ.", kaynak: "صحيح مسلم" }
     ]
 };
 
