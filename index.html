@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="sayfaBasligi">Ramazan ve Bayram Rehberi</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Scheherazade+New:wght@400;700&family=Work+Sans:wght@300;400;500;600&family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dil Seçici -->
+    <div class="language-selector">
+        <button onclick="setLanguage('tr')" class="lang-btn active">TR</button>
+        <button onclick="setLanguage('en')" class="lang-btn">EN</button>
+        <button onclick="setLanguage('ar')" class="lang-btn">AR</button>
+    </div>
+
+    <!-- Star Background -->
+    <div id="stars-container"></div>
+
+    <!-- Arka plan Deseni -->
+    <div class="pattern-bg"></div>
+
+    <!-- MAHYA BÖLÜMÜ -->
+    <section class="mahya-section">
+        <div class="minaret minaret-left">
+            <div class="minaret-structure"></div>
+        </div>
+
+        <div class="mahya-container">
+            <div class="mahya-wire"></div>
+            <!-- Kullanıcı bu yazıyı değiştirebilir -->
+            <h1 class="mahya-text" id="mahya-display" data-i18n="mahyaVarsayilan">HOŞ GELDİN RAMAZAN</h1>
+            <div class="mahya-controls">
+                <input type="text" id="mahya-input" data-i18n-placeholder="mahyaYeri" placeholder="Mahyaya ne yazalım?"
+                    maxlength="25">
+            </div>
+        </div>
+
+        <div class="minaret minaret-right">
+            <div class="minaret-structure"></div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Ana Geri Sayım Kartı -->
+        <section class="main-card-section">
+            <div class="classic-card main-info-card">
+                <div class="card-header">
+                    <h2 data-i18n="sayacBaslik">Vuslata Kalan Zaman</h2>
+                    <div class="ornament-line"></div>
+                </div>
+
+                <div class="countdown-grid">
+                    <div class="time-box">
+                        <span class="t-val" id="ramadan-days">00</span>
+                        <span class="t-label" data-i18n="gun">GÜN</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="t-val" id="ramadan-hours">00</span>
+                        <span class="t-label" data-i18n="saat">SAAT</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="t-val" id="ramadan-minutes">00</span>
+                        <span class="t-label" data-i18n="dakika">DAKİKA</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="t-val" id="ramadan-seconds">00</span>
+                        <span class="t-label" data-i18n="saniye">SANİYE</span>
+                    </div>
+                </div>
+
+                <div class="target-date-info" id="ramadan-date-text">
+                    ...
+                </div>
+            </div>
+        </section>
+
+        <!-- Orta Bölüm: Ay ve Kart -->
+        <div class="feature-grid">
+
+            <!-- Canlı Ay Evresi -->
+            <div class="classic-card moon-card">
+                <h3 data-i18n="ayBaslik">Gökyüzünde Bugün</h3>
+                <div class="moon-visual">
+                    <div class="moon" id="moon-graphic">
+                        <div class="disc"></div>
+                    </div>
+                </div>
+                <p class="moon-phase-name" id="moon-phase-text">...</p>
+                <p class="hijri-sm-date" id="hijri-current-date">...</p>
+            </div>
+
+            <!-- Tebrik Kartı Oluşturucu -->
+            <div class="classic-card greeting-card-maker">
+                <h3 data-i18n="kartBaslik">Tebrik Kartı Oluştur</h3>
+                <div class="input-group">
+                    <input type="text" id="card-name-input" data-i18n-placeholder="kartIsimYeri" placeholder="İsminiz">
+                    <button class="btn-primary" id="create-card-btn" data-i18n="kartButon">Kartı İndir</button>
+                    <!-- Yükleme Göstergesi -->
+                    <div id="loading-indicator" style="display:none; color: var(--accent-color);">
+                        <small data-i18n="hazirlaniyor">Hazırlanıyor...</small>
+                    </div>
+                </div>
+                <!-- Gizli Canvas -->
+                <canvas id="greeting-canvas" width="800" height="600" style="display: none;"></canvas>
+            </div>
+        </div>
+
+        <!-- Diğer Bayramlar -->
+        <section class="secondary-holidays">
+            <div class="holiday-row">
+                <span class="h-name" data-i18n="ramazanBaslangic">Ramazan Başlangıcı</span>
+                <span class="h-date" id="ramadan-start-date">...</span>
+                <span class="h-left" id="ramadan-start-timer">...</span>
+            </div>
+            <div class="holiday-row">
+                <span class="h-name" data-i18n="ramazanBayrami">Ramazan Bayramı</span>
+                <span class="h-date" id="eid-fitr-date">...</span>
+                <span class="h-left" id="eid-fitr-timer">...</span>
+            </div>
+            <div class="holiday-row">
+                <span class="h-name" data-i18n="kurbanBayrami">Kurban Bayramı</span>
+                <span class="h-date" id="eid-adha-date">...</span>
+                <span class="h-left" id="eid-adha-timer">...</span>
+            </div>
+        </section>
+
+        <!-- Günün Sözü -->
+        <section class="daily-wisdom">
+            <div class="wisdom-content">
+                <span class="ornament">۞</span>
+                <p id="daily-quote">...</p>
+                <cite id="quote-source"></cite>
+                <span class="ornament">۞</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 <span data-i18n="altBilgi">Bayram Rehberi</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
